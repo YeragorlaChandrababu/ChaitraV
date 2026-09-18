@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#120d2b">
+<meta name="description" content="A birthday surprise for Chaitra.">
+<title>Happy Birthday, Chaitra! ✨</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:#fff;font-family:"DM Sans",sans-serif;background:#090719;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 12% 15%,#8b5cf655,transparent 30%),radial-gradient(circle at 88% 18%,#f472b655,transparent 27%),radial-gradient(circle at 50% 90%,#38bdf844,transparent 32%),#090719}
+.stars{position:fixed;inset:0;z-index:-2;opacity:.25;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#fff 1px,transparent 1px);background-position:0 0,55px 80px;background-size:110px 110px,170px 170px;animation:drift 35s linear infinite}
+@keyframes drift{to{background-position:180px 150px,240px 260px}}.wrap{width:min(1060px,90%);margin:auto}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:70px 0;position:relative}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border:1px solid #fff2;background:#fff1;border-radius:999px;color:#ddd6fe;font-size:.82rem;backdrop-filter:blur(14px)}
+h1{font-family:"Playfair Display",serif;font-size:clamp(4.2rem,15vw,10rem);line-height:.84;letter-spacing:-.06em;margin:26px 0 22px;background:linear-gradient(110deg,#fff 20%,#fbcfe8 55%,#c4b5fd);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(1rem,2.5vw,1.3rem);line-height:1.75;color:#d9d4e9;max-width:680px;margin:auto}.date{margin-top:25px;color:#f9a8d4;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.btn{display:inline-flex;margin-top:32px;padding:13px 19px;border:1px solid #fff2;border-radius:14px;color:#fff;text-decoration:none;background:#fff1;backdrop-filter:blur(12px);transition:.25s}.btn:hover{transform:translateY(-3px);background:#fff2}
+section{padding:90px 0}.section-head{text-align:center;margin-bottom:38px}.kicker{color:#c4b5fd;font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.title{font-family:"Playfair Display",serif;font-size:clamp(2.2rem,6vw,4rem);margin:10px 0 0}.card{border:1px solid #fff2;background:linear-gradient(145deg,#ffffff0c,#ffffff05);border-radius:28px;padding:clamp(25px,5vw,55px);box-shadow:0 25px 80px #0005;backdrop-filter:blur(18px)}
+.message{font-family:"Playfair Display",serif;font-size:clamp(1.4rem,3vw,2rem);line-height:1.65;color:#f8f5ff;text-align:center}.signature{text-align:center;color:#c9c2dc;margin-top:22px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.photo{aspect-ratio:1;border-radius:22px;overflow:hidden;border:1px solid #fff2;background:#fff1;display:none}.photo img{width:100%;height:100%;object-fit:cover;display:block}.gallery.has-images .photo{display:block}.gallery.empty{grid-template-columns:1fr}.gallery.empty:after{content:"Your special memories can live here ✨";display:block;padding:45px;text-align:center;border:1px dashed #fff2;border-radius:22px;color:#aaa4bd}
+.reveal{opacity:0;transform:translateY(22px);transition:.7s ease}.reveal.show{opacity:1;transform:none}footer{padding:45px 0 65px;text-align:center;color:#77718e;font-size:.82rem}.heart{display:inline-block;animation:pulse 1.3s ease-in-out infinite}@keyframes pulse{50%{transform:scale(1.25)}}@media(max-width:700px){.gallery{grid-template-columns:1fr 1fr}.gallery .photo:last-child{display:none}.hero{padding-top:45px}section{padding:65px 0}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<header class="hero"><div class="wrap reveal">
+<div class="eyebrow">🎂 Today is all about you</div>
+<h1>Happy<br>Birthday,<br>Chaitra!</h1>
+<p class="lead">May this new chapter bring you beautiful moments, unexpected reasons to smile, and everything your heart has been quietly wishing for.</p>
+<div class="date">18 September · Your day to shine</div>
+<a class="btn" href="#wish">Open your birthday note ↓</a>
+</div></header>
+<main>
+<section id="wish"><div class="wrap reveal"><div class="section-head"><div class="kicker">A little note</div><h2 class="title">For you, Chaitra</h2></div>
+<div class="card"><div class="message">“Here’s to another year of laughter, lovely memories, big dreams, and little moments that make life feel special. Keep being wonderfully you. Happy Birthday! 💜✨”</div><div class="signature">— With warm wishes, always</div></div></div></section>
+<section><div class="wrap reveal"><div class="section-head"><div class="kicker">Memories</div><h2 class="title">Moments worth keeping</h2></div>
+<div id="gallery" class="gallery empty">
+<div class="photo"><img src="images/1.jpg" alt="Birthday memory 1"></div><div class="photo"><img src="images/2.jpg" alt="Birthday memory 2"></div><div class="photo"><img src="images/3.jpg" alt="Birthday memory 3"></div>
+</div></div></section>
+</main>
+<footer>Made with <span class="heart">♥</span> for Chaitra · Have the loveliest birthday!</footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add("show")),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
+const gallery=document.querySelector("#gallery"), imgs=[...gallery.querySelectorAll("img")];
+let loaded=0;imgs.forEach(img=>{img.addEventListener("load",()=>{loaded++;gallery.classList.remove("empty");gallery.classList.add("has-images")});img.addEventListener("error",()=>img.closest(".photo").remove())});
+setTimeout(()=>{if(!gallery.querySelector("img"))gallery.classList.add("empty")},500);
+</script>
+</body></html>
